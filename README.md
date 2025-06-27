@@ -26,7 +26,7 @@ Follow these steps to clone and run the project locally.
 Open your terminal and run:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/MansoorEhmad/laravel_query_builder.git
 ```
 ##
 
