@@ -15,14 +15,34 @@ class studentController extends Controller
         //$students = DB::table('students')->select('name','email')->get();
 
         // where
-        $students = DB::table('students')->where('email', '=', 'km@gmail.com')->get();
+        //$students = DB::table('students')->where('email', '=', 'km@gmail.com')->get();
         //$students = DB::table('students')->where('email', '=', 'km@gmail.com')->where('age', '>', 15)->get();
         // $students = DB::table('students')->where('email', '=', 'km@gmail.com')->orWhere('age', '>', 15)->get();
 
         //dd($students);
         //return $students;
 
-        $students = DB::table('students')->get();
+        //$students = DB::table('students')->get();
+
+        // pagination:
+        /*
+            FOR HTML USE ONLY
+            <!-- simplePaginate() -->
+            <!-- {{ $data->links() }} -->
+
+            <!-- paginate() -->
+            <!-- {{ $data->links('pagination::bootstrap-5') }} -->
+
+            <!-- cursorPaginate() -->
+            <!-- {{ $data->links() }} -->
+        */
+        
+        //$students = DB::table('students')->orderBy('name')->simplePaginate(3);
+
+        //$students = DB::table('students')->paginate(3);
+
+        $students = DB::table('students')->orderBy('name')->cursorPaginate(3);
+
         return view('students', ['data' => $students]);
     }
 

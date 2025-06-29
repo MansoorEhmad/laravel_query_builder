@@ -37,6 +37,10 @@ All Students | Laravel Query Builder
                 @endforeach
             </tbody>
         </table>
+        <div class="mt-5">
+             
+            {{ $data->links() }}
+        </div>
     </div>
 </div>
 @endsection
